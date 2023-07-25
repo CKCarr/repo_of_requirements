@@ -147,7 +147,7 @@ host = environment variable HBNB_API_HOST or 0.0.0.0 if not defined
 port = environment variable HBNB_API_PORT or 5000 if not defined
 
 so as not to have to set these over and over every terminal I put these exports (aliases) in 
-my ~/.bashrc
+my ~/.bashrc  (you can use the same exports below in the file itself and run 'source ~/.bashrc' in cli afterwards to update and save)
 however if you choose not to do this or just want a script to run here you go...
 ========================================================================
 set_env_variables.sh
