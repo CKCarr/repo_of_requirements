@@ -36,7 +36,7 @@ CREATE USER
 
 (hbnb) 4a0d7b5b-b094-454b-a537-f21a62ef2720       <<<<<<<<<<< this is the user uid for my first user instance 
 
-cho 'SELECT * FROM users\G' | mysql -uhbnb_dev -p hbnb_dev_db <<<<<<<<<<<< run to see table population in my sql or go to my sql and run select * from users;
+echo 'SELECT * FROM users\G' | mysql -uhbnb_dev -p hbnb_dev_db <<<<<<<<<<<< run to see table population in my sql or go to my sql and run select * from users;
 
 
 CREATE PLACE
@@ -64,7 +64,7 @@ echo 'create Review place_id="391c4b1a-fc39-4d69-ac6d-37ad2776fe5b" user_id="e30
 
 (hbnb) 8598efbc-84c7-469b-91d5-a8a1ad15a105        <<<<<<<<<<<<<<<< now i have a review id 
 
-cho 'SELECT * FROM reviews\G' | mysql -uhbnb_dev -p hbnb_dev_db    <<<<<<<<<<<<<<<<< run to see table population in my sql or go to my sql and run select * from reviews;
+echo 'SELECT * FROM reviews\G' | mysql -uhbnb_dev -p hbnb_dev_db    <<<<<<<<<<<<<<<<< run to see table population in my sql or go to my sql and run select * from reviews;
 
 
 
