@@ -129,3 +129,70 @@ echo 'SELECT * FROM amenities\G' | mysql -uhbnb_dev -p hbnb_dev_db
 echo 'SELECT * FROM places\G' | mysql -uhbnb_dev -p hbnb_dev_db
 
 echo 'SELECT * FROM place_amenity\G' | mysql -uhbnb_dev -p hbnb_dev_db
+
+
+++++++++++++++++++++++++++++++++++EXTRA NOTES THAT MAY OR MAY NOT APPLY++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++ I did these steps as well++++++++++++++++++++++++++++++++
+
+These are the environmental variables give throughout AIRBNB project
+====================================================================
+HBNB_ENV: running environment. It can be “dev” or “test” for the moment (“production” soon!)
+HBNB_MYSQL_USER: the username of your MySQL
+HBNB_MYSQL_PWD: the password of your MySQL
+HBNB_MYSQL_HOST: the hostname of your MySQL
+HBNB_MYSQL_DB: the database name of your MySQL
+HBNB_TYPE_STORAGE: the type of storage used. It can be “file” (using FileStorage) or db (using DBStorage)
+
+host = environment variable HBNB_API_HOST or 0.0.0.0 if not defined
+port = environment variable HBNB_API_PORT or 5000 if not defined
+
+so as not to have to set these over and over every terminal I put these exports (aliases) in 
+my ~/.bashrc
+however if you choose not to do this or just want a script to run here you go...
+========================================================================
+set_env_variables.sh
+___________________________________________________________
+#!/bin/bash
+
+export HBNB_MYSQL_USER="hbnb_dev"
+export HBNB_MYSQL_PWD="hbnb_dev_pwd"
+export HBNB_MYSQL_HOST="localhost"
+export HBNB_MYSQL_DB="hbnb_dev_db"
+export HBNB_TYPE_STORAGE="db"
+export HBNB_API_HOST="0.0.0.0"
+export HBNB_API_PORT="5000"
+________________________________________________________________
+
+Save the file and give it execute permissions:
+
+chmod +x set_env_variables.sh
+__________________________________________________________________
+Execute the bash script to set the environment variables in your terminal: (you must execute with source to apply changes)
+
+source set_env_variables.sh
+_________________________________________________________________________________
+
+FOR my SQL
+=========================
+
+set up mysql database for hbnh_clone
+___________________________________________
+
+cat setup_mysql_dev.sql | mysql -hlocalhost -uroot -p
+
+mysql -hlocalhost -uroot -p
+________________________________________________________
+just for notes in the event i must drop and recreate the database this is for reference
+=============================================
+
+
+
+in python3 (for storage reload between db and file)
+________________________________________________________
+
+from models.engine.db_storage import DBStorage
+storage = DBStorage()
+storage.reload()
+
+============================================
+
