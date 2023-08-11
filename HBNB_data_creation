@@ -3,6 +3,8 @@ remember the pwd is hbnb_dev_pwd
 
 remember the id's are going to be random generated so mine will not work :)
 
+creating data via console
+________________________________________________
 
 # CREATE STATE
 
@@ -188,12 +190,17 @@ just for notes in the event i must drop and recreate the database this is for re
 
 
 in python3 (for storage reload between db and file)
+
+when reloading data between json file storage and mysql database
 ________________________________________________________
 
 from models.engine.db_storage import DBStorage
 storage = DBStorage()
 storage.reload()
-
+____________________________________________
+from models.engine.file_storage import FileStorage
+storage = FileStorage()
+storage.reload()
 ============================================
 
 
