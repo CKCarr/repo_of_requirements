@@ -196,3 +196,22 @@ storage.reload()
 
 ============================================
 
+
+for data mysql 
+ curl -o 100-dump.sql "https://s3.eu-west-3.amazonaws.com/hbtn.intranet.project.files/holbertonschool-higher-level_programming+/290/100-hbnb.sql"
+
+cat 100-dump.sql | mysql -uroot -p
+
+you can now see all data populated in mysql
+using mysql statements;
+
+in the folder you want to run flask app
+ you can create a script to run the file you wan or set variable for flask
+
+export FLASK_APP=file_app.py
+flask run
+
+for excample in web_dynamic 
+export FLASK_APP=1-hbnb.py
+flask run                            
+
