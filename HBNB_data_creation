@@ -4,7 +4,7 @@ remember the pwd is hbnb_dev_pwd
 remember the id's are going to be random generated so mine will not work :)
 
 
-CREATE STATE
+# CREATE STATE
 
  echo 'create State name="California"' | HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db ./console.py
 
@@ -13,7 +13,7 @@ CREATE STATE
 echo 'SELECT * FROM states\G' | mysql -uhbnb_dev -p hbnb_dev_db  <<<< run to see table population in my sql or go to my sql and run select * from states;
 
 
-CREATE CITY
+# CREATE CITY
 
 i will now use it to create my city with the state_id
 
@@ -30,7 +30,7 @@ echo 'create City state_id="0f8dd2aa-2168-4e4a-898f-6ab07e1904dd" name="San_Jose
 echo 'SELECT * FROM cities\G' | mysql -uhbnb_dev -p hbnb_dev_db   <<<<<<<<run to see table population in my sql or go to my sql and run select * from cities;
 
 
-CREATE USER
+# CREATE USER
 
  echo 'create User email="gui@hbtn.io" password="guipwd" first_name="Guillaume" last_name="Snow"' | HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db ./console.py 
 
@@ -39,7 +39,7 @@ CREATE USER
 echo 'SELECT * FROM users\G' | mysql -uhbnb_dev -p hbnb_dev_db <<<<<<<<<<<< run to see table population in my sql or go to my sql and run select * from users;
 
 
-CREATE PLACE
+# CREATE PLACE
 here we create a place by the user above for the city of choice i am using sanfran
 
 echo 'create Place city_id="c9377d9e-c0a8-4033-a68b-f3464c7983da" user_id="4a0d7b5b-b094-454b-a537-f21a62ef2720" name="Lovely_place" number_rooms=3 number_bathrooms=1 max_guest=6 price_by_night=120 latitude=37.773972 longitude=-122.431297' | HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db ./console.py
@@ -50,7 +50,7 @@ echo 'create Place city_id="c9377d9e-c0a8-4033-a68b-f3464c7983da" user_id="4a0d7
 
 echo 'SELECT * FROM places\G' | mysql -uhbnb_dev -p hbnb_dev_db   <<<<<<<<<<<<    run to see table population in my sql or go to my sql and run select * from places;
 
-CREATE REVIEW
+# CREATE REVIEW
 
 now i need to create another user to make a review
 
@@ -68,7 +68,7 @@ echo 'SELECT * FROM reviews\G' | mysql -uhbnb_dev -p hbnb_dev_db    <<<<<<<<<<<<
 
 
 
-create place_amenity file to test
+# create place_amenity file to test
 
 _____________________ vim main_place_amenities.py______________________________________________
 
