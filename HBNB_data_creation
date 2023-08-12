@@ -222,3 +222,6 @@ for excample in web_dynamic
 export FLASK_APP=1-hbnb.py
 flask run                            
 
+
+______________________________________________________________
+ curl -X POST http://0.0.0.0:5000/api/v1/places_search -H "Content-Type: application/json" -d '{"states": ["0e391e25-dd3a-45f4-bce3-4d1dea83f3c7", "10098698-bace-4bfb-8c0a-6bae0f7f5b8f"], "cities": ["05b0b99c-f10e-4e3a-88d1-b3187d6998ee"]}'
