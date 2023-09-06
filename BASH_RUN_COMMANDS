@@ -89,3 +89,16 @@ alias w3c='python3 ~/W3C-Validator/w3c_validator.py'
 step 3. run on command line to update
 source ~/.bashrc
 =======================================================
+
+For Node.js, Jest, Babel, ESlint -- versions may be outdated- check requirements:)
+<details>
+<summary>Step 1: Install Node.js 12.11.x</summary>
+<summary>In your home directory, open a terminal and run the following commands:</summary>
+
+```
+curl -sL https://deb.nodesource.com/setup_12.x -o nodesource_setup.sh
+sudo bash nodesource_setup.sh
+sudo apt install nodejs -y
+```
+</details>
+
